@@ -92,11 +92,11 @@ graph TD
     QuickCheck --> Done[Log success<br/>Archive email]
 
     %% Class definitions with white text
-    classDef redNode fill:#c41e3a,stroke:#000,stroke-width:2px,color:#fff
-    classDef greenNode fill:#2d6a2d,stroke:#000,stroke-width:2px,color:#fff
-    classDef orangeNode fill:#d97706,stroke:#000,stroke-width:2px,color:#fff
-    classDef blueNode fill:#2563eb,stroke:#000,stroke-width:2px,color:#fff
-    classDef lightNode fill:#e1f5ff,color:#000
+    classDef redNode fill:#c41e3a,stroke:#000,stroke-width:2px,color:#fff;
+    classDef greenNode fill:#2d6a2d,stroke:#000,stroke-width:2px,color:#fff;
+    classDef orangeNode fill:#d97706,stroke:#000,stroke-width:2px,color:#fff;
+    classDef blueNode fill:#2563eb,stroke:#000,stroke-width:2px,color:#fff;
+    classDef lightNode fill:#e1f5ff,color:#000;
 
     %% Apply classes
     class Critical,SSHVerify,RunBackfill,VerifyFix,Escalate redNode
