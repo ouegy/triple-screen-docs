@@ -1,0 +1,4 @@
+/* Fix Mermaid classDef color not applying to p tags - known issue */
+.mermaid .nodeLabel p {
+    color: inherit !important;
+}
