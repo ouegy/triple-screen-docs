@@ -60,11 +60,11 @@ graph TD
     Verify -->|No - Attempt 3+| Escalate[Escalate to<br/>Dev Team]
 
     style Start fill:#e1f5ff,color:#000
-    style Resolved fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
-    style Escalate fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style CheckStatus fill:#2d6a2d,color:#fff
-    style RestartService fill:#c41e3a,color:#fff
-    style StartService fill:#c41e3a,color:#fff
+    style Resolved fill:#51cf66,color:#fff !important,stroke:#000,stroke-width:2px
+    style Escalate fill:#ff6b6b,color:#fff !important,stroke:#000,stroke-width:2px
+    style CheckStatus fill:#51cf66,color:#fff
+    style RestartService fill:#ff6b6b,color:#fff
+    style StartService fill:#ff6b6b,color:#fff
 ```
 
 **Quick Reference:**

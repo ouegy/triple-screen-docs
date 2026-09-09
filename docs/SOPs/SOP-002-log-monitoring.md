@@ -63,11 +63,11 @@ graph TD
     Found([Found the issue?])
 
     style Start fill:#e1f5ff,color:#000
-    style Found fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
-    style RealTime fill:#2d6a2d,color:#fff
-    style Historical fill:#2d6a2d,color:#fff
-    style Errors fill:#c41e3a,color:#fff
-    style Keyword fill:#2d6a2d,color:#fff
+    style Found fill:#51cf66,color:#fff !important,stroke:#000,stroke-width:2px
+    style RealTime fill:#51cf66,color:#fff
+    style Historical fill:#51cf66,color:#fff
+    style Errors fill:#ff6b6b,color:#fff
+    style Keyword fill:#51cf66,color:#fff
 ```
 
 ---

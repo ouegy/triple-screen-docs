@@ -292,24 +292,24 @@ graph TD
     FinalKeep --> Monitor([Monitor for<br/>Screen 3 Breakout])
 
     style Start fill:#e1f5ff,color:#000
-    style FinalKeep fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
-    style Monitor fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
-    style Remove1 fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style Remove2 fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style Remove3 fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style Remove4 fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style End fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style FinalKeep fill:#51cf66,color:#fff !important,stroke:#000,stroke-width:2px
+    style Monitor fill:#51cf66,color:#fff !important,stroke:#000,stroke-width:2px
+    style Remove1 fill:#ff6b6b,color:#fff !important,stroke:#000,stroke-width:2px
+    style Remove2 fill:#ff6b6b,color:#fff !important,stroke:#000,stroke-width:2px
+    style Remove3 fill:#ff6b6b,color:#fff !important,stroke:#000,stroke-width:2px
+    style Remove4 fill:#ff6b6b,color:#fff !important,stroke:#000,stroke-width:2px
+    style End fill:#ff6b6b,color:#fff !important,stroke:#000,stroke-width:2px
     style MarketRegime fill:#e1f5ff,color:#000
-    style BullKeep fill:#2d6a2d,color:#fff
-    style ChoppyKeep fill:#d97706,color:#fff
-    style BearKeep fill:#c41e3a,color:#fff
+    style BullKeep fill:#51cf66,color:#fff
+    style ChoppyKeep fill:#ffa94d,color:#fff
+    style BearKeep fill:#ff6b6b,color:#fff
     style SectorCheck fill:#e1f5ff,color:#000
     style NewsCheck fill:#e1f5ff,color:#000
     style HeatCheck fill:#e1f5ff,color:#000
     style ChartCheck fill:#e1f5ff,color:#000
-    style Keep1 fill:#2d6a2d,color:#fff
-    style Selective fill:#d97706,color:#fff
-    style VerySelective fill:#d97706,color:#fff
+    style Keep1 fill:#51cf66,color:#fff
+    style Selective fill:#ffa94d,color:#fff
+    style VerySelective fill:#ffa94d,color:#fff
 ```
 
 ---
