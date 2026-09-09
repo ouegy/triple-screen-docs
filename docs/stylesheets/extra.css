@@ -1,0 +1,12 @@
+/* Force white text on colored Mermaid flowchart backgrounds */
+.mermaid [fill="#c41e3a"] p,
+.mermaid [fill="#2d6a2d"] p,
+.mermaid [fill="#d97706"] p,
+.mermaid [fill="#2563eb"] p {
+    color: #fff !important;
+}
+
+/* Keep black text on light blue backgrounds */
+.mermaid [fill="#e1f5ff"] p {
+    color: #000 !important;
+}
