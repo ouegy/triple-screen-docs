@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "triple-screen-docs"
+version = "1.0.0"
+description = "Triple Screen Trading System Documentation"
+authors = ["Ian Butler"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs-material = "^9.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
