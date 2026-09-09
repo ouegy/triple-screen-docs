@@ -91,7 +91,7 @@ graph TD
     QuickCheck --> Done[Log success<br/>Archive email]
 
     %% Styling
-    style Start fill:#e1f5ff
+    style Start fill:#e1f5ff,color:#000
     style Critical fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
     style SSHVerify fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
     style RunBackfill fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
@@ -104,7 +104,7 @@ graph TD
     style Info fill:#2563eb,color:#fff,stroke:#000,stroke-width:2px
     style QuickCheck fill:#2563eb,color:#fff,stroke:#000,stroke-width:2px
     style Done fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
-    style CheckSeverity fill:#e1f5ff
+    style CheckSeverity fill:#e1f5ff,color:#000
     style CheckRate fill:#d97706,color:#fff
 ```
 

@@ -291,7 +291,7 @@ graph TD
     Remove4 --> End
     FinalKeep --> Monitor([Monitor for<br/>Screen 3 Breakout])
 
-    style Start fill:#e1f5ff
+    style Start fill:#e1f5ff,color:#000
     style FinalKeep fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
     style Monitor fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
     style Remove1 fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
@@ -299,14 +299,14 @@ graph TD
     style Remove3 fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
     style Remove4 fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
     style End fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style MarketRegime fill:#e1f5ff
+    style MarketRegime fill:#e1f5ff,color:#000
     style BullKeep fill:#2d6a2d,color:#fff
     style ChoppyKeep fill:#d97706,color:#fff
     style BearKeep fill:#c41e3a,color:#fff
-    style SectorCheck fill:#e1f5ff
-    style NewsCheck fill:#e1f5ff
-    style HeatCheck fill:#e1f5ff
-    style ChartCheck fill:#e1f5ff
+    style SectorCheck fill:#e1f5ff,color:#000
+    style NewsCheck fill:#e1f5ff,color:#000
+    style HeatCheck fill:#e1f5ff,color:#000
+    style ChartCheck fill:#e1f5ff,color:#000
     style Keep1 fill:#2d6a2d,color:#fff
     style Selective fill:#d97706,color:#fff
     style VerySelective fill:#d97706,color:#fff
