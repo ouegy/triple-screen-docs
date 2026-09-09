@@ -65,6 +65,9 @@ graph TD
     style CheckStatus fill:#2d6a2d,color:#fff
     style RestartService fill:#c41e3a,color:#fff
     style StartService fill:#c41e3a,color:#fff
+    style CheckStatus fill:#2d6a2d,color:#fff
+    style RestartService fill:#c41e3a,color:#fff
+    style StartService fill:#c41e3a,color:#fff
 ```
 
 **Quick Reference:**
