@@ -1,12 +1,17 @@
-/* Force white text on colored Mermaid flowchart backgrounds */
-.mermaid [fill="#c41e3a"] p,
-.mermaid [fill="#2d6a2d"] p,
-.mermaid [fill="#d97706"] p,
-.mermaid [fill="#2563eb"] p {
+/* Force white text on p tags inside colored Mermaid flowchart nodes */
+.mermaid g[class*="node"] p {
+    color: inherit !important;
+}
+
+/* Specifically target colored backgrounds */
+.mermaid g.node rect[fill="#c41e3a"] ~ foreignObject p,
+.mermaid g.node rect[fill="#2d6a2d"] ~ foreignObject p,
+.mermaid g.node rect[fill="#d97706"] ~ foreignObject p,
+.mermaid g.node rect[fill="#2563eb"] ~ foreignObject p {
     color: #fff !important;
 }
 
 /* Keep black text on light blue backgrounds */
-.mermaid [fill="#e1f5ff"] p {
+.mermaid g.node rect[fill="#e1f5ff"] ~ foreignObject p {
     color: #000 !important;
 }
