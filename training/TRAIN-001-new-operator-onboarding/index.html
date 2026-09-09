@@ -1,0 +1,3314 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete operational documentation for the Triple Screen quantitative trading system">
+      
+      
+        <meta name="author" content="Ian Butler">
+      
+      
+        <link rel="canonical" href="https://ouegy.github.io/triple-screen-docs/training/TRAIN-001-new-operator-onboarding/">
+      
+      
+        <link rel="prev" href="../../reference/REF-002-database-queries/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>New Operator Onboarding - Triple Screen Trading System Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#train-001-new-operator-onboarding" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Triple Screen Trading System Documentation" class="md-header__button md-logo" aria-label="Triple Screen Trading System Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Triple Screen Trading System Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              New Operator Onboarding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ouegy/triple-screen-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ouegy/triple-screen-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../SOPs/SOP-001-vps-service-management/" class="md-tabs__link">
+          
+  
+  
+  VPS Operations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/GUIDE-001-dashboard-navigation/" class="md-tabs__link">
+          
+  
+  
+  Dashboard Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/REF-001-vps-commands/" class="md-tabs__link">
+          
+  
+  
+  Quick Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Training
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Triple Screen Trading System Documentation" class="md-nav__button md-logo" aria-label="Triple Screen Trading System Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Triple Screen Trading System Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ouegy/triple-screen-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ouegy/triple-screen-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VPS Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOPs/SOP-001-vps-service-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOPs/SOP-002-log-monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOPs/SOP-003-database-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOPs/SOP-004-email-alert-response/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Email Alert Response
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboard Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-001-dashboard-navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-002-watchlist-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Watchlist Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-003-daily-signal-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Signal Removal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-004-trade-journaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trade Journaling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-005-performance-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/REF-001-vps-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/REF-002-database-queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Training
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New Operator Onboarding
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New Operator Onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-triple-screen-trading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welcome to the Triple Screen Trading System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-1-system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1: System Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 1: System Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-triple-screen-trading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Triple Screen Trading System?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-k-tharp-position-sizing-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Van K. Tharp Position Sizing Methodology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekly-operator-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly Operator Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-11-system-concepts-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 1.1: System Concepts Quiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-2-dashboard-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 2: Dashboard Navigation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 2: Dashboard Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-page-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Page Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-21-navigation-drill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 2.1: Navigation Drill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-3-weekly-watchlist-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 3: Weekly Watchlist Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 3: Weekly Watchlist Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-the-weekly-relative-strength-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the Weekly Relative Strength Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-symbols-to-watchlist-bulk-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Symbols to Watchlist (Bulk Method)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-outdated-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing Outdated Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-31-watchlist-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 3.1: Watchlist Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-4-daily-signal-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 4: Daily Signal Removal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 4: Daily Signal Removal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-pending-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Pending Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-signal-removal-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Signal Removal Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-41-signal-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 4.1: Signal Evaluation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-5-trade-journaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 5: Trade Journaling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 5: Trade Journaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-apgar-scoring-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Apgar Scoring System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completing-trade-apgar-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completing Trade Apgar Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documenting-trade-exits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documenting Trade Exits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-51-mock-apgar-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 5.1: Mock Apgar Scoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-6-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 6: Performance Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 6: Performance Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-portfolio-heat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Portfolio Heat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-performance-metrics-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Performance Metrics Explained
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-61-metrics-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 6.1: Metrics Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-7-vps-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 7: VPS Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 7: VPS Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-vps-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essential VPS Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-access-for-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Access for Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-71-vps-operations-drill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 7.1: VPS Operations Drill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-8-alert-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 8: Alert Response
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 8: Alert Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-alert-severity-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email Alert Severity Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-alert-response-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRITICAL Alert Response Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning-alert-response-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WARNING Alert Response Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info-alert-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INFO Alert Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-81-alert-triage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 8.1: Alert Triage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assessment Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assessment Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekly-watchlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly Watchlist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-signal-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Signal Removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trade-journaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trade Journaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vps-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPS Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-daily-task-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Daily Task Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-weekly-task-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Weekly Task Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps-after-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps After Training
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-triple-screen-trading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welcome to the Triple Screen Trading System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-1-system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1: System Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 1: System Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-triple-screen-trading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Triple Screen Trading System?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-k-tharp-position-sizing-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Van K. Tharp Position Sizing Methodology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekly-operator-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly Operator Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-11-system-concepts-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 1.1: System Concepts Quiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-2-dashboard-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 2: Dashboard Navigation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 2: Dashboard Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-page-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Page Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-21-navigation-drill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 2.1: Navigation Drill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-3-weekly-watchlist-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 3: Weekly Watchlist Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 3: Weekly Watchlist Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-the-weekly-relative-strength-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the Weekly Relative Strength Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-symbols-to-watchlist-bulk-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Symbols to Watchlist (Bulk Method)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-outdated-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing Outdated Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-31-watchlist-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 3.1: Watchlist Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-4-daily-signal-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 4: Daily Signal Removal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 4: Daily Signal Removal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-pending-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Pending Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-signal-removal-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Signal Removal Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-41-signal-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 4.1: Signal Evaluation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-5-trade-journaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 5: Trade Journaling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 5: Trade Journaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-apgar-scoring-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Apgar Scoring System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completing-trade-apgar-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completing Trade Apgar Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documenting-trade-exits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documenting Trade Exits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-51-mock-apgar-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 5.1: Mock Apgar Scoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-6-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 6: Performance Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 6: Performance Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-portfolio-heat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Portfolio Heat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-performance-metrics-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Performance Metrics Explained
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-61-metrics-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 6.1: Metrics Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-7-vps-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 7: VPS Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 7: VPS Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-vps-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essential VPS Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-access-for-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Access for Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-71-vps-operations-drill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 7.1: VPS Operations Drill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-8-alert-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 8: Alert Response
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module 8: Alert Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-alert-severity-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email Alert Severity Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-alert-response-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRITICAL Alert Response Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning-alert-response-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WARNING Alert Response Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info-alert-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INFO Alert Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise-81-alert-triage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Exercise 8.1: Alert Triage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assessment Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assessment Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekly-watchlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly Watchlist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-signal-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Signal Removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trade-journaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trade Journaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vps-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPS Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-daily-task-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Daily Task Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-weekly-task-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Weekly Task Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps-after-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps After Training
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="train-001-new-operator-onboarding">TRAIN-001: New Operator Onboarding</h1>
+<p><strong>Version:</strong> 1.0 | <strong>Last Updated:</strong> 2026-09-08 | <strong>Audience:</strong> New Triple Screen Operators</p>
+<hr />
+<h2 id="welcome-to-the-triple-screen-trading-system">Welcome to the Triple Screen Trading System</h2>
+<p>This comprehensive training guide will transform you from complete beginner to confident operator of the Triple Screen trading system. No prior trading knowledge required - we'll teach you everything you need to know.</p>
+<p>By the end of this training, you'll independently manage watchlists, respond to signals, journal trades, monitor VPS infrastructure, and handle alerts with confidence.</p>
+<p><strong>Training Duration:</strong> 4-6 hours (complete at your own pace)</p>
+<hr />
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By completing this training, you will be able to:</p>
+<ol>
+<li>Navigate the dashboard and locate all 8 pages without assistance</li>
+<li>Run the weekly relative strength scan and update the manual watchlist with 30+ symbols</li>
+<li>Remove unwanted signals from the pending queue before market open (9:25 AM ET deadline)</li>
+<li>Score a trade using the 5-criteria Apgar system within 1 week of entry</li>
+<li>Document trade exits with charts and tactical classification on the same day</li>
+<li>Interpret portfolio heat and recognize when risk exceeds 6% threshold</li>
+<li>SSH to VPS and restart a failed service within 5 minutes</li>
+<li>Query the database to verify daily data loaded successfully (507 records expected)</li>
+<li>Respond to CRITICAL email alerts within 15 minutes and halt trading until resolved</li>
+<li>Monitor real-time logs during market hours to track signal generation</li>
+</ol>
+<hr />
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting this training, ensure you have:</p>
+<ul>
+<li><strong>Dashboard access:</strong> Password to <code>https://trading.tradingwars.app</code> (or localhost URL)</li>
+<li><strong>VPS SSH access:</strong> Credentials for <code>ssh triple-screen@vps-hostname.com</code></li>
+<li><strong>Database credentials:</strong> PostgreSQL password (stored securely, not in git)</li>
+<li><strong>Email access:</strong> Account receiving Triple Screen alerts</li>
+<li><strong>Computer with:</strong></li>
+<li>Modern web browser (Chrome, Firefox, Safari, Edge)</li>
+<li>Terminal application (macOS Terminal, Windows PowerShell, or Linux shell)</li>
+<li>Internet connection</li>
+<li><strong>Time commitment:</strong> 4-6 hours in 1-2 sessions</li>
+</ul>
+<p><strong>Optional but helpful:</strong>
+- Basic understanding of stock markets (buy/sell, profit/loss concepts)
+- Familiarity with command line basics (cd, ls, grep)
+- SQL query experience (SELECT statements)</p>
+<hr />
+<h2 id="module-1-system-overview">Module 1: System Overview</h2>
+<h3 id="what-is-the-triple-screen-trading-system">What is the Triple Screen Trading System?</h3>
+<p>The Triple Screen Trading System is an automated swing trading strategy based on Dr. Alexander Elder's methodology and Van K. Tharp's position sizing principles. It identifies medium-term trend-following opportunities in S&amp;P 500 stocks.</p>
+<p><strong>Three Screens Explained:</strong>
+- <strong>Screen 1 (Weekly Trend):</strong> Is the stock in a sustained uptrend? (EMA-13, EMA-26, MACD Force Index)
+- <strong>Screen 2 (Daily Pullback):</strong> Has price pulled back within the weekly uptrend? (Force Index dip)
+- <strong>Screen 3 (Daily Breakout):</strong> Is price breaking out from the pullback? (Force Index crosses above zero)</p>
+<p><strong>Your Role as Operator:</strong>
+You provide discretionary judgment at key decision points while the system handles data processing, indicator calculation, and execution monitoring. Think of yourself as the quality control layer between algorithmic signals and capital deployment.</p>
+<h3 id="van-k-tharp-position-sizing-methodology">Van K. Tharp Position Sizing Methodology</h3>
+<p>Every trade is sized using the R-multiple framework:
+- <strong>1R</strong> = Initial risk (distance from entry to stop-loss)
+- <strong>Position size</strong> = (Account equity × Risk % per trade) ÷ R
+- <strong>Max portfolio heat</strong> = 10% (total risk across all open positions)</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Account: £10,000
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Risk per trade: 2% = £200
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Entry: £150
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Stop: £145
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Initial risk (R): £5 per share
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Position size: £200 ÷ £5 = 40 shares
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Total position value: 40 × £150 = £6,000
+</code></pre></div></p>
+<h3 id="weekly-operator-workflow">Weekly Operator Workflow</h3>
+<p><strong>Sunday Evening (After Market Close):</strong>
+1. Run weekly relative strength scan (10 min)
+2. Update manual watchlist with 30-50 best stocks (15 min)</p>
+<p><strong>Monday-Friday Morning (9:00-9:25 AM ET):</strong>
+1. Review overnight signals (5-10 signals expected)
+2. Remove unwanted signals using discretionary judgment (10 min)
+3. Verify dashboard shows clean signal queue by 9:25 AM</p>
+<p><strong>Monday-Friday During Market Hours:</strong>
+1. System monitors for Screen 3 breakouts automatically
+2. Check email for execution alerts (trade triggered)
+3. Score new positions with Apgar (within 1 week of entry)</p>
+<p><strong>After Position Exits:</strong>
+1. Document exit reason and tactic same day
+2. Upload exit charts
+3. Complete post-trade review 60+ days later</p>
+<p><strong>Daily (Ongoing):</strong>
+1. Monitor VPS service health
+2. Respond to email alerts within required timeframes
+3. Review portfolio heat and performance metrics</p>
+<h3 id="practice-exercise-11-system-concepts-quiz">Practice Exercise 1.1: System Concepts Quiz</h3>
+<p>Before proceeding, verify your understanding:</p>
+<p><strong>Q1:</strong> Screen 2 identifies what type of market condition?
+- A) Weekly uptrend
+- B) Daily pullback within weekly uptrend
+- C) Daily breakout entry trigger</p>
+<p><strong>Q2:</strong> If your account is £10,000 and you risk 2% per trade with a stop £5 away from entry, how many shares do you buy?
+- A) 40 shares
+- B) 200 shares
+- C) 100 shares</p>
+<p><strong>Q3:</strong> What is the maximum portfolio heat allowed?
+- A) 5%
+- B) 10%
+- C) 15%</p>
+<p><strong>Answers:</strong> Q1: B, Q2: A, Q3: B</p>
+<p>If you missed any, re-read the relevant section before continuing.</p>
+<hr />
+<h2 id="module-2-dashboard-navigation">Module 2: Dashboard Navigation</h2>
+<h3 id="accessing-the-dashboard">Accessing the Dashboard</h3>
+<p><strong>Production Environment:</strong>
+1. Open browser and navigate to: <code>https://trading.tradingwars.app</code>
+2. Enter dashboard password when prompted (characters hidden as bullets)
+3. Press Enter or click outside password field
+4. <strong>Success:</strong> You see "Triple Screen Trading System" home page</p>
+<p><strong>Local Development Environment:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>backend/dashboard
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>streamlit<span class="w"> </span>run<span class="w"> </span>Home.py
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Open browser to: http://localhost:8501</span>
+</code></pre></div></p>
+<p><strong>Troubleshooting:</strong>
+- Password incorrect: Contact system administrator
+- Page won't load: Check VPS status (Module 7)
+- Certificate warning: Production uses HTTPS - accept security exception if self-signed cert</p>
+<h3 id="dashboard-page-reference">Dashboard Page Reference</h3>
+<p><strong>Home Page:</strong>
+- Welcome message and system status
+- Quick navigation guide
+- Use when: First login or orientation</p>
+<p><strong>Overview Page:</strong>
+- Portfolio summary (equity, cash, open positions, portfolio heat)
+- Performance metrics (Total Return %, Win Rate, Sharpe Ratio, Recovery Factor)
+- Market classification (bull/bear/sideways + volatility)
+- Equity curve chart
+- Use when: Daily health check, weekly performance review</p>
+<p><strong>Positions Page:</strong>
+- All open positions with live P&amp;L
+- Trade Bill format (Identification, Apgar, Entry Setup, After Entry sections)
+- Entry charts and market context
+- Partial exits and stop movements
+- Use when: Monitoring active trades intraday</p>
+<p><strong>Signals Page:</strong>
+- Manual Watchlist management (add/remove symbols)
+- Pending signals awaiting Screen 3 breakout
+- Position sizing and risk calculations
+- Signal expiration countdown
+- Use when: Weekly watchlist update, daily signal removal (9:00-9:25 AM ET)</p>
+<p><strong>Trades Page:</strong>
+- Complete historical trade performance
+- Advanced filtering (Apgar score, exit tactic, review status, A-trades only)
+- Expandable Trade Bill for each closed position
+- Performance analytics and CSV export
+- Use when: Post-trade analysis, identifying performance patterns</p>
+<p><strong>Trade Apgar Page:</strong>
+- 5-criteria scoring form (0-10 total points)
+- Market context fields (earnings date, dividend date, conditions)
+- Entry rationale text and chart upload
+- List of unscored positions
+- Use when: Scoring trades within 1 week of entry</p>
+<p><strong>Trade Journal Page:</strong>
+- Post-exit documentation workflow
+- 5 sections: Entry reason, Entry/exit data, Exit reason, Exit tactic, Post-trade review
+- Chart management (upload/delete)
+- Use when: Documenting exits same day, conducting 60-day retrospective reviews</p>
+<p><strong>A Trade Showcase Page:</strong>
+- Reference A-grade trade example (VLO backtest trade)
+- Complete Trade Bill demonstration
+- Full Apgar scoring breakdown
+- Use when: Learning trade documentation standards</p>
+<h3 id="practice-exercise-21-navigation-drill">Practice Exercise 2.1: Navigation Drill</h3>
+<p>Complete these tasks without looking at the guide:</p>
+<ol>
+<li>Navigate to Overview page and find your current portfolio heat percentage</li>
+<li>Navigate to Signals page and count how many symbols are in your watchlist</li>
+<li>Navigate to Trade Apgar page and identify how many positions need scoring</li>
+<li>Navigate to Trades page and filter to show only A-trades (Apgar 7+)</li>
+</ol>
+<p><strong>Success criteria:</strong> Completed all 4 tasks in under 3 minutes</p>
+<hr />
+<h2 id="module-3-weekly-watchlist-management">Module 3: Weekly Watchlist Management</h2>
+<h3 id="running-the-weekly-relative-strength-scan">Running the Weekly Relative Strength Scan</h3>
+<p><strong>When:</strong> Sunday evening after market close (5:00-10:00 PM ET)</p>
+<p><strong>What it does:</strong> Scans all S&amp;P 500 stocks for sustained weekly uptrends (EMA-26 rising 3+ weeks) with early bullish momentum (MACD histogram uptick below zero).</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>
+<p>SSH to VPS:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh<span class="w"> </span>triple-screen@your-vps-hostname.com
+</code></pre></div></p>
+</li>
+<li>
+<p>Navigate to backend and activate environment:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>/path/to/triple-screen/backend
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</code></pre></div></p>
+</li>
+<li>
+<p>Run weekly scan:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>scripts/run_weekly_ema_macd_scan.py
+</code></pre></div></p>
+</li>
+<li>
+<p>Review scan output table showing:</p>
+</li>
+<li>Rank (by MACD histogram change)</li>
+<li>Symbol and company name</li>
+<li>Sector</li>
+<li>Current price</li>
+<li>EMA-26 current vs previous</li>
+<li>
+<p>MACD histogram current vs previous</p>
+</li>
+<li>
+<p>Locate comma-separated list at bottom:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Comma-separated symbols (for copy/paste):
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>----------------------------------------
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA, ...
+</code></pre></div></p>
+</li>
+<li>
+<p>Copy this list (select text, Ctrl+C or Cmd+C)</p>
+</li>
+</ol>
+<p><strong>Expected output:</strong> 20-60 symbols depending on market conditions (bull markets produce more, bear markets fewer)</p>
+<h3 id="adding-symbols-to-watchlist-bulk-method">Adding Symbols to Watchlist (Bulk Method)</h3>
+<ol>
+<li>Open dashboard → Signals page</li>
+<li>Locate "Manual Watchlist" section at top</li>
+<li>Click <strong>Add Multiple Stocks</strong> tab</li>
+<li>Paste comma-separated symbol list in "Symbols" text area</li>
+<li>Add notes (optional): "Weekly scan 2026-09-08 - Strong EMA + MACD uptick"</li>
+<li>Click <strong>Add All Stocks</strong> button</li>
+<li>Review results:</li>
+<li>Green: "Added N stocks: AAPL, MSFT, ..."</li>
+<li>Yellow: "Skipped N (already in watchlist): ..."</li>
+<li>Red: "Invalid N symbols: ..." (with reasons)</li>
+</ol>
+<p><strong>Common issues:</strong>
+- Invalid symbols: Check spelling, verify symbol exists in market database
+- Duplicates: Automatically skipped (no error)
+- All symbols rejected: Check VPS database connection</p>
+<h3 id="removing-outdated-symbols">Removing Outdated Symbols</h3>
+<p><strong>When to remove:</strong>
+- Stock broke below weekly EMA-26
+- MACD histogram turned negative 2+ weeks
+- Sector rotation (money flowing elsewhere)
+- Position limit reached for that sector</p>
+<p><strong>Steps:</strong>
+1. Review watchlist table on Signals page
+2. Click <strong>Remove</strong> button next to symbol
+3. Confirmation message: "Removed SYMBOL"
+4. Page refreshes with updated list</p>
+<p><strong>Bulk cleanup:</strong>
+1. Click <strong>Clear All</strong> button (trash icon) to remove entire watchlist
+2. Confirm in popup: "Removed N stocks from watchlist"
+3. Use this sparingly (typically only during strategy changes)</p>
+<h3 id="practice-exercise-31-watchlist-management">Practice Exercise 3.1: Watchlist Management</h3>
+<p>Complete this workflow:</p>
+<ol>
+<li>Add 3 symbols manually: AAPL, MSFT, GOOGL (use "Add Single Stock" tab)</li>
+<li>Add notes for each: "Practice exercise - learning watchlist management"</li>
+<li>Verify watchlist count increased by 3</li>
+<li>Remove GOOGL from watchlist</li>
+<li>Verify watchlist count decreased by 1</li>
+</ol>
+<p><strong>Success criteria:</strong> Watchlist contains AAPL and MSFT with notes, GOOGL removed</p>
+<hr />
+<h2 id="module-4-daily-signal-removal">Module 4: Daily Signal Removal</h2>
+<h3 id="understanding-pending-signals">Understanding Pending Signals</h3>
+<p><strong>What is a pending signal?</strong>
+A stock that passed Screen 1 (weekly trend) and Screen 2 (daily pullback), now awaiting Screen 3 (daily breakout) to trigger entry.</p>
+<p><strong>Signal lifecycle:</strong>
+1. Generated overnight after daily data refresh (6:00 PM ET)
+2. Reviewed by operator next morning (9:00-9:25 AM ET)
+3. Operator removes unwanted signals
+4. System monitors remaining signals for Screen 3 breakout during market hours
+5. Signal triggers → Position entry OR signal expires after 24 hours</p>
+<h3 id="daily-signal-removal-workflow">Daily Signal Removal Workflow</h3>
+<p><strong>When:</strong> Every trading day, 9:00-9:25 AM ET (must complete before 9:30 AM market open)</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Navigate to dashboard → Signals page</li>
+<li>Scroll to "Signals Awaiting Breakout" section</li>
+<li>Review table columns:</li>
+<li>Symbol</li>
+<li>Signal Date (when Screen 1+2 passed)</li>
+<li>Expires At (24-hour countdown)</li>
+<li>
+<p>Remove button</p>
+</li>
+<li>
+<p>For each signal, apply discretionary filters:</p>
+</li>
+<li><strong>Market classification:</strong> Keep more in bull markets, fewer in bear markets</li>
+<li><strong>Sector rotation:</strong> Remove lagging sectors, keep leaders</li>
+<li><strong>News events:</strong> Remove if earnings within 48 hours, FDA decisions pending, lawsuits</li>
+<li><strong>Chart quality:</strong> Expand "Daily Chart" to verify clean pullback pattern</li>
+<li>
+<p><strong>Portfolio heat:</strong> Remove if approaching 10% risk limit</p>
+</li>
+<li>
+<p>Click <strong>Remove</strong> button for unwanted signals</p>
+</li>
+<li>
+<p>Verify final signal queue by 9:25 AM ET</p>
+</li>
+</ol>
+<p><strong>Decision framework:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Market Regime</th>
+<th>Keep %</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bull Market</td>
+<td>80-90%</td>
+<td>8 signals generated → keep 6-7</td>
+</tr>
+<tr>
+<td>Choppy Market</td>
+<td>50-60%</td>
+<td>8 signals generated → keep 4-5</td>
+</tr>
+<tr>
+<td>Bear Market</td>
+<td>20-40%</td>
+<td>8 signals generated → keep 1-3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Red flags (always remove):</strong>
+- Earnings report within 48 hours
+- FDA/regulatory decision pending
+- Executive scandal or lawsuit headlines
+- Sector showing clear distribution/selling pressure
+- Chart breaking major support levels</p>
+<h3 id="practice-exercise-41-signal-evaluation">Practice Exercise 4.1: Signal Evaluation</h3>
+<p>Review these hypothetical signals and decide keep/remove:</p>
+<p><strong>Signal 1:</strong> AAPL, earnings tomorrow, clean chart, tech sector leading
+- Decision: REMOVE (earnings binary risk)</p>
+<p><strong>Signal 2:</strong> XOM, no news, clean pullback, energy sector rotating in, portfolio heat 4%
+- Decision: KEEP (all criteria favorable)</p>
+<p><strong>Signal 3:</strong> CVS, lawsuit headline today, healthcare sector weak, chart messy
+- Decision: REMOVE (multiple red flags)</p>
+<p>If your decisions match, you understand the discretionary filtering framework.</p>
+<hr />
+<h2 id="module-5-trade-journaling">Module 5: Trade Journaling</h2>
+<h3 id="the-apgar-scoring-system">The Apgar Scoring System</h3>
+<p><strong>Purpose:</strong> Systematically evaluate trade setup quality after entry. A-trades (score 7+) should statistically outperform lower-quality setups.</p>
+<p><strong>5 Criteria (0-2 points each):</strong></p>
+<p><strong>Criterion 1: Daily Price</strong>
+- 0 points: Above value zone
+- 1 point: In the value zone
+- 2 points: Below the value zone (best entry)</p>
+<p><strong>Criterion 2: MACD Uptick</strong>
+- 0 points: Shallow above centre line
+- 1 point: Shallow below centre line
+- 2 points: Deep below centre line (best momentum)</p>
+<p><strong>Criterion 3: Weekly Impulse</strong>
+- 0 points: Red (downtrend)
+- 1 point: Green (uptrend)
+- 2 points: Blue after red (trend reversal, best setup)</p>
+<p><strong>Criterion 4: RSI</strong>
+- 0 points: Overbought (&gt;70)
+- 1 point: Neutral (30-70)
+- 2 points: Oversold (&lt;30, best value)
+- Enter exact RSI value in number field</p>
+<p><strong>Criterion 5: Perfection</strong>
+- 0 points: Neither timeframe perfect
+- 1 point: One timeframe perfect
+- 2 points: Both timeframes perfect</p>
+<p><strong>Scoring:</strong>
+- 0-6 points: Non-A-trade (acceptable but not ideal)
+- 7-10 points: A-trade (high-quality setup)</p>
+<p><strong>Target:</strong> 30-40% of trades should be A-trades. Too high (&gt;50%) means overly selective; too low (&lt;20%) means accepting poor setups.</p>
+<h3 id="completing-trade-apgar-workflow">Completing Trade Apgar Workflow</h3>
+<p><strong>When:</strong> Within 1 week of position entry (while setup details fresh)</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Navigate to dashboard → Trade Apgar page</li>
+<li>Select position from dropdown (unscored positions listed first)</li>
+<li>Score each of 5 criteria using radio buttons</li>
+<li>Enter exact RSI value in number field (criterion 4)</li>
+<li>Review auto-calculated total score and A-trade status</li>
+<li>Document market context:</li>
+<li><strong>Earnings Date:</strong> Check Briefing.com or company IR calendar</li>
+<li><strong>Dividend Date:</strong> Check Yahoo Finance for ex-div date</li>
+<li><strong>Market Conditions:</strong> "Spike bounce in effect, S&amp;P above 50MA, sector showing relative strength"</li>
+<li>Write entry rationale: "Perfect pullback to EMA-26, strong Force Index divergence, early breakout with volume confirmation"</li>
+<li>Upload entry charts (daily and weekly)</li>
+<li>Click <strong>Save Apgar &amp; Context</strong> button</li>
+</ol>
+<p><strong>Success:</strong> Position marked with Apgar score, ready for exit analysis</p>
+<h3 id="documenting-trade-exits">Documenting Trade Exits</h3>
+<p><strong>When:</strong> Same day you close position (memory fades quickly)</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Navigate to dashboard → Trade Journal page</li>
+<li>Select closed position from dropdown</li>
+<li>Review Section A (Entry reason - pre-filled from Apgar)</li>
+<li>Review Section B (Entry/exit data - auto-populated)</li>
+<li>Complete Section C (Reason for Exit):</li>
+<li>Write detailed description: "Hit R1 target, showing signs of reversal in morning session. MACD histogram weakening, Force Index turning negative."</li>
+<li>Upload exit chart showing entry + exit together</li>
+<li>Click <strong>Save Exit Details</strong></li>
+<li>Complete Section D (Exit Tactic):</li>
+<li>Choose from Elder's 8 standard tactics:<ul>
+<li>2:1 Hit target</li>
+<li>2:2 Hit stop</li>
+<li>2:3 Hit value zone</li>
+<li>2:3a Hit envelope</li>
+<li>2:4 Trade going nowhere</li>
+<li>2:5 Started turning</li>
+<li>2:6 Couldn't stand the pain</li>
+<li>2:7 Junk trade</li>
+</ul>
+</li>
+<li>Click <strong>Save Exit Tactic</strong></li>
+</ol>
+<p><strong>Section E (Post-Trade Review) - wait 60 days:</strong>
+After 2+ months, return to position and write hindsight analysis:
+- "In hindsight, this was a great entry. Could have held for R3 target instead of exiting early at R1. Weekly uptrend continued for 6 more weeks after my exit."
+- Upload follow-up chart showing how trade developed</p>
+<h3 id="practice-exercise-51-mock-apgar-scoring">Practice Exercise 5.1: Mock Apgar Scoring</h3>
+<p>Score this hypothetical trade:</p>
+<p><strong>Trade:</strong> AAPL entry on 2026-09-08
+- Daily price: In value zone (1 point)
+- MACD uptick: Deep below centre line (2 points)
+- Weekly Impulse: Green (1 point)
+- RSI: 42 (neutral, 1 point)
+- Perfection: Daily perfect, weekly not (1 point)</p>
+<p><strong>Total score:</strong> 6 points (non-A-trade, acceptable quality)</p>
+<p>Practice this workflow on the dashboard with a real or test position.</p>
+<hr />
+<h2 id="module-6-performance-metrics">Module 6: Performance Metrics</h2>
+<h3 id="understanding-portfolio-heat">Understanding Portfolio Heat</h3>
+<p><strong>What it is:</strong> Total percentage of your account at risk across all open positions.</p>
+<p><strong>Calculation:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>For each position:
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  Risk per position = Shares × (Entry - Stop)
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Total portfolio heat = Sum of all position risks ÷ Total equity
+</code></pre></div></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Account: £10,000
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Position 1: 100 shares, entry £150, stop £145 → Risk: £500
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Position 2: 50 shares, entry £200, stop £192 → Risk: £400
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Position 3: 75 shares, entry £80, stop £77 → Risk: £225
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Total heat = (£500 + £400 + £225) ÷ £10,000 = 11.25%
+</code></pre></div></p>
+<p><strong>Thresholds:</strong>
+- Below 6%: Normal (room for new trades)
+- 6-8%: Moderate (be selective)
+- 8-10%: High (keep best signals only)
+- Above 10%: <strong>CRITICAL - Remove ALL signals, wait for exits</strong></p>
+<p><strong>Where to find:</strong> Overview page → Portfolio Summary section → Portfolio Heat percentage with color coding (green &lt;10%, red ≥10%)</p>
+<h3 id="key-performance-metrics-explained">Key Performance Metrics Explained</h3>
+<p><strong>Total Return:</strong>
+- Percentage: How much you've grown relative to starting capital
+- Amount: Actual profit/loss in pounds
+- Example: Started £10,000, now £10,800 → +8% or +£800</p>
+<p><strong>Win Rate:</strong>
+- Percentage of trades that make money
+- Example: 10 closed trades, 6 winners → 60% win rate
+- Note: High win rate doesn't guarantee profitability (small winners + huge losers = net loss)</p>
+<p><strong>Profit Factor:</strong>
+- Total profits ÷ Total losses
+- Example: All winners = £1,200, all losers = £400 → Profit factor = 3.0
+- Target: Above 2.0 = excellent, 1.5-2.0 = good, below 1.0 = losing money</p>
+<p><strong>Expectancy:</strong>
+- Average profit per trade over many trades
+- Formula: (Win Rate × Avg Win) - (Loss Rate × Avg Loss)
+- Example: 60% win rate, £197 avg win, £100 avg loss → Expectancy = £78.20
+- Target: Positive = profitable, above £50 (for £10k account) = good</p>
+<p><strong>Sharpe Ratio:</strong>
+- Risk-adjusted return (how smooth is your equity curve)
+- Above 1.5 = excellent, 1.0-1.5 = good, below 0.5 = too volatile
+- Example: Two traders both made 20% annually, but Trader A with steady growth (Sharpe 1.8) beats Trader B with wild swings (Sharpe 0.4)</p>
+<p><strong>Max Drawdown:</strong>
+- Largest drop from peak to valley
+- Example: Account peaked at £12,000, dropped to £11,000 → Max drawdown = -£1,000 or -8.3%
+- Use this to set expectations: If max drawdown is 10%, expect occasional 10% dips (don't panic)</p>
+<h3 id="practice-exercise-61-metrics-interpretation">Practice Exercise 6.1: Metrics Interpretation</h3>
+<p>Review your dashboard Overview page and answer:</p>
+<ol>
+<li>What is your current portfolio heat? Is it within acceptable limits?</li>
+<li>What is your win rate? Does your profit factor support profitability?</li>
+<li>What is your expectancy? Is it positive?</li>
+<li>What is your max drawdown? Are you comfortable with that level of volatility?</li>
+</ol>
+<p><strong>Success criteria:</strong> Answered all 4 questions and can explain what each metric means in plain English</p>
+<hr />
+<h2 id="module-7-vps-operations">Module 7: VPS Operations</h2>
+<h3 id="essential-vps-skills">Essential VPS Skills</h3>
+<p><strong>Connecting to VPS:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ssh<span class="w"> </span>triple-screen@your-vps-hostname.com
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># Enter password when prompted</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># Success: You see command prompt</span>
+</code></pre></div></p>
+<p><strong>Checking Service Status:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>triple-screen-orchestrator
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>triple-screen-dashboard
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>triple-screen-api
+</code></pre></div></p>
+<p>Expected output (healthy service):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Active: active (running) since Mon 2026-09-08 09:00:00 UTC; 2h 15min ago
+</code></pre></div></p>
+<p><strong>Restarting a Service:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>triple-screen-orchestrator
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>triple-screen-orchestrator<span class="w">  </span><span class="c1"># Verify restart</span>
+</code></pre></div></p>
+<p>Expected: Status changes to "active (running)" within 30 seconds</p>
+<p><strong>Viewing Real-Time Logs:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Follow orchestrator logs</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>triple-screen-orchestrator<span class="w"> </span>-f
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Stop following: Press Ctrl+C</span>
+</code></pre></div></p>
+<p><strong>Common Log Queries:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Errors from last hour</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>journalctl<span class="w"> </span>-u<span class="w"> </span><span class="s2">"triple-screen-*"</span><span class="w"> </span>-p<span class="w"> </span>err<span class="w"> </span>--since<span class="w"> </span><span class="s2">"1 hour ago"</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Logs from market open (9:30-10:00 AM)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>triple-screen-orchestrator<span class="w"> </span>--since<span class="w"> </span><span class="s2">"today 09:30"</span><span class="w"> </span>--until<span class="w"> </span><span class="s2">"today 10:00"</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># Find logs mentioning AAPL</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>triple-screen-orchestrator<span class="w"> </span>--since<span class="w"> </span><span class="s2">"today"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>AAPL
+</code></pre></div></p>
+<h3 id="database-access-for-verification">Database Access for Verification</h3>
+<p><strong>Connect to database:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Export password (one-time per SSH session)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PGPASSWORD</span><span class="o">=</span><span class="s1">'your_database_password'</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Connect to market database</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market
+</code></pre></div></p>
+<p><strong>Common verification queries:</strong></p>
+<p>Count today's daily prices:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">daily_prices</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1">-- Expected: 507 records</span>
+</code></pre></div></p>
+<p>Check for NULL values:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">symbol</span><span class="p">,</span><span class="w"> </span><span class="k">close</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">daily_prices</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="k">close</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1">-- Expected: 0 rows (no NULLs)</span>
+</code></pre></div></p>
+<p>List pending signals:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_portfolio<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="s2">  SELECT symbol, signal_date, expires_at</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="s2">  FROM live_signals</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="s2">  WHERE status = 'pending'</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="s2">  ORDER BY signal_date DESC;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="s2">"</span>
+</code></pre></div></p>
+<p><strong>Exit database:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="err">\</span><span class="n">q</span>
+</code></pre></div></p>
+<p><strong>Exit SSH:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">exit</span>
+</code></pre></div></p>
+<h3 id="practice-exercise-71-vps-operations-drill">Practice Exercise 7.1: VPS Operations Drill</h3>
+<p>Complete these tasks on your VPS:</p>
+<ol>
+<li>SSH to VPS</li>
+<li>Check orchestrator service status (verify it's running)</li>
+<li>View last 50 lines of orchestrator logs</li>
+<li>Connect to market database and count daily_prices records for current date</li>
+<li>Exit database and SSH session</li>
+</ol>
+<p><strong>Time limit:</strong> 5 minutes
+<strong>Success criteria:</strong> Completed all 5 tasks, verified orchestrator running, confirmed 400+ price records</p>
+<hr />
+<h2 id="module-8-alert-response">Module 8: Alert Response</h2>
+<h3 id="email-alert-severity-levels">Email Alert Severity Levels</h3>
+<p><strong>[CRITICAL] Alerts:</strong>
+- Response time: <strong>15 minutes</strong>
+- Impact: System-wide data corruption, all signals invalid
+- Action: <strong>HALT TRADING immediately</strong>
+- Example: "NaN Data Detected - 235/507 symbols (46.4%)"</p>
+<p><strong>[WARNING] Alerts:</strong>
+- Response time: <strong>2 hours</strong>
+- Impact: Partial data failure, some symbols affected
+- Action: Continue trading (monitor closely)
+- Example: "Data Validation Failures - 12/507 (2.4%)"</p>
+<p><strong>[INFO] Alerts:</strong>
+- Response time: Next business day (verify only)
+- Impact: Normal operation confirmation
+- Action: Normal operations
+- Example: "Daily Ingestion Complete - 507/507 (100.0%)"</p>
+<h3 id="critical-alert-response-workflow">CRITICAL Alert Response Workflow</h3>
+<p><strong>Alert received:</strong> "[CRITICAL] Triple Screen - NaN Data Detected"</p>
+<p><strong>Immediate actions (within 15 minutes):</strong></p>
+<ol>
+<li><strong>DO NOT TRADE</strong> new signals until resolved</li>
+<li>SSH to VPS and verify issue:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="s2">  SELECT symbol, close</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="s2">  FROM daily_prices</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="s2">  WHERE date = CURRENT_DATE AND close IS NULL</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="s2">  LIMIT 10;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="s2">"</span>
+</code></pre></div></li>
+<li>Check orchestrator logs for root cause:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>triple-screen-orchestrator<span class="w"> </span>--since<span class="w"> </span><span class="s2">"today 02:00"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ERROR
+</code></pre></div></li>
+<li>Run backfill script (if implemented):
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/triple-screen/backend
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>src.scripts.backfill_corrupted_data<span class="w"> </span>--date<span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>
+</code></pre></div></li>
+<li>Verify fix:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="s2">  SELECT COUNT(*)</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="s2">  FROM daily_prices</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="s2">  WHERE date = CURRENT_DATE AND close IS NULL;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="s2">"</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="c1"># Expected: 0 (no NULLs)</span>
+</code></pre></div></li>
+<li>Resume trading only after verification passes</li>
+</ol>
+<h3 id="warning-alert-response-workflow">WARNING Alert Response Workflow</h3>
+<p><strong>Alert received:</strong> "[WARNING] Data Validation Failures - 12/507 (2.4%)"</p>
+<p><strong>Response (within 2 hours):</strong></p>
+<ol>
+<li>Assess scope:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="s2">  SELECT COUNT(*) FROM daily_prices WHERE date = CURRENT_DATE;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="s2">"</span>
+</code></pre></div></li>
+<li>Decision tree:</li>
+<li>&lt;5% failed: Log and monitor (acceptable)</li>
+<li>5-10% failed: Investigate within 2 hours</li>
+<li>
+<blockquote>
+<p>10% failed: Escalate to CRITICAL response</p>
+</blockquote>
+</li>
+<li>Verify no pending signals for failed symbols:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_portfolio<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="s2">  SELECT symbol FROM live_signals</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="s2">  WHERE status = 'pending' AND symbol IN ('ABBV', 'ACN');</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="s2">"</span>
+</code></pre></div></li>
+<li>Document in trading journal: "WARNING: 12 symbols failed validation - Yahoo API instability"</li>
+</ol>
+<h3 id="info-alert-verification">INFO Alert Verification</h3>
+<p><strong>Alert received:</strong> "[INFO] Daily Ingestion Complete - 507/507 (100.0%)"</p>
+<p><strong>Verification (next business day, optional):</strong>
+1. Confirm success rate ≥95%
+2. Note execution time (baseline: 30-60 seconds)
+3. Review pending signals for trading opportunities
+4. Delete email (or archive)</p>
+<h3 id="practice-exercise-81-alert-triage">Practice Exercise 8.1: Alert Triage</h3>
+<p>Classify these alerts and state response time:</p>
+<ol>
+<li>"[CRITICAL] NaN Data Detected - 150/507 symbols"</li>
+<li>
+<p><strong>Response:</strong> Immediate (15 min), halt trading</p>
+</li>
+<li>
+<p>"[WARNING] Data Validation Failures - 8/507 (1.6%)"</p>
+</li>
+<li>
+<p><strong>Response:</strong> Within 2 hours, continue trading</p>
+</li>
+<li>
+<p>"[INFO] Daily Ingestion Complete - 507/507 (100%)"</p>
+</li>
+<li><strong>Response:</strong> Next day verification (optional)</li>
+</ol>
+<p>If your responses match, you understand alert prioritization.</p>
+<hr />
+<h2 id="assessment-checklist">Assessment Checklist</h2>
+<p>Before concluding your training, verify you can perform these tasks independently:</p>
+<h3 id="dashboard-operations">Dashboard Operations</h3>
+<ul>
+<li>[ ] Navigate to any dashboard page within 30 seconds</li>
+<li>[ ] Locate portfolio heat on Overview page and interpret threshold</li>
+<li>[ ] Find pending signals on Signals page</li>
+<li>[ ] Filter Trades page to show only A-trades</li>
+</ul>
+<h3 id="weekly-watchlist">Weekly Watchlist</h3>
+<ul>
+<li>[ ] SSH to VPS and run weekly scan script</li>
+<li>[ ] Copy comma-separated symbol list from scan output</li>
+<li>[ ] Add 10+ symbols to watchlist using bulk method</li>
+<li>[ ] Remove 3 symbols from watchlist individually</li>
+<li>[ ] Verify watchlist count updated correctly</li>
+</ul>
+<h3 id="daily-signal-removal">Daily Signal Removal</h3>
+<ul>
+<li>[ ] Access Signals page before 9:25 AM ET</li>
+<li>[ ] Review 5+ pending signals and apply discretionary filters</li>
+<li>[ ] Remove unwanted signals by clicking Remove button</li>
+<li>[ ] Verify final signal queue clean before market open</li>
+</ul>
+<h3 id="trade-journaling">Trade Journaling</h3>
+<ul>
+<li>[ ] Score a trade using 5-criteria Apgar system</li>
+<li>[ ] Calculate total Apgar score and identify A-trade status</li>
+<li>[ ] Upload entry chart (daily and weekly)</li>
+<li>[ ] Document exit reason and tactic same day</li>
+<li>[ ] Explain when post-trade review becomes available (60 days)</li>
+</ul>
+<h3 id="performance-metrics">Performance Metrics</h3>
+<ul>
+<li>[ ] Locate portfolio heat and recognize 10% threshold</li>
+<li>[ ] Explain difference between win rate and profit factor</li>
+<li>[ ] Calculate expectancy given win rate, avg win, avg loss</li>
+<li>[ ] Interpret Sharpe ratio (higher = smoother equity curve)</li>
+</ul>
+<h3 id="vps-operations">VPS Operations</h3>
+<ul>
+<li>[ ] SSH to VPS using terminal</li>
+<li>[ ] Check status of all 3 core services</li>
+<li>[ ] Restart orchestrator service and verify success</li>
+<li>[ ] View real-time logs using journalctl -f</li>
+<li>[ ] Filter logs for errors only</li>
+<li>[ ] Exit SSH session cleanly</li>
+</ul>
+<h3 id="database-queries">Database Queries</h3>
+<ul>
+<li>[ ] Export PGPASSWORD and connect to market database</li>
+<li>[ ] Count daily_prices records for current date</li>
+<li>[ ] Check for NULL values in close prices</li>
+<li>[ ] List pending signals from portfolio database</li>
+<li>[ ] Exit psql and unset password</li>
+</ul>
+<h3 id="alert-response">Alert Response</h3>
+<ul>
+<li>[ ] Identify alert severity from email subject</li>
+<li>[ ] State response time for CRITICAL, WARNING, INFO</li>
+<li>[ ] Execute CRITICAL response workflow (verify NULLs, run backfill)</li>
+<li>[ ] Assess WARNING scope and apply decision tree</li>
+<li>[ ] Verify INFO alert and delete email</li>
+</ul>
+<p><strong>Training Complete:</strong> If you checked all boxes, you're ready to operate the Triple Screen system independently!</p>
+<hr />
+<h2 id="quick-reference-daily-task-checklist">Quick Reference: Daily Task Checklist</h2>
+<p><strong>Every Sunday Evening:</strong>
+- [ ] Run weekly scan: <code>python scripts/run_weekly_ema_macd_scan.py</code>
+- [ ] Copy comma-separated symbols
+- [ ] Update watchlist on Signals page (30-50 stocks)
+- [ ] Verify watchlist count updated</p>
+<p><strong>Every Trading Day (9:00-9:25 AM ET):</strong>
+- [ ] Open dashboard → Signals page
+- [ ] Review pending signals (typically 5-10)
+- [ ] Remove unwanted signals using discretionary filters
+- [ ] Verify signal queue clean by 9:25 AM</p>
+<p><strong>After New Position Entry (Within 1 Week):</strong>
+- [ ] Navigate to Trade Apgar page
+- [ ] Score trade with 5 criteria
+- [ ] Upload entry charts
+- [ ] Document market context and entry rationale</p>
+<p><strong>After Position Exit (Same Day):</strong>
+- [ ] Navigate to Trade Journal page
+- [ ] Document exit reason and upload chart
+- [ ] Select exit tactic from Elder's 8 categories
+- [ ] Save exit details</p>
+<p><strong>Daily (Ongoing):</strong>
+- [ ] Check email for Triple Screen alerts
+- [ ] Respond to CRITICAL alerts within 15 minutes
+- [ ] Monitor portfolio heat on Overview page
+- [ ] Review VPS service health (if time permits)</p>
+<p><strong>Weekly (Sunday):</strong>
+- [ ] Review performance metrics on Overview page
+- [ ] Identify A-trades on Trades page and analyze patterns
+- [ ] Complete post-trade reviews for positions 60+ days old</p>
+<hr />
+<h2 id="quick-reference-weekly-task-checklist">Quick Reference: Weekly Task Checklist</h2>
+<p><strong>Every Sunday Evening:</strong>
+- [ ] Run weekly scan and update watchlist (Module 3)
+- [ ] Review weekly performance metrics (Module 6)
+- [ ] Complete pending post-trade reviews (Module 5)</p>
+<hr />
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p><strong>Issue:</strong> Dashboard won't load
+- <strong>Solution:</strong> Check VPS status, verify orchestrator and dashboard services running, restart if needed</p>
+<p><strong>Issue:</strong> Cannot add symbols to watchlist (all rejected)
+- <strong>Solution:</strong> Verify symbols exist in market database, check for typos, ensure VPS database connection active</p>
+<p><strong>Issue:</strong> No pending signals showing
+- <strong>Solution:</strong> Verify watchlist has stocks, check market conditions (bear markets produce fewer signals), review logs for scan completion</p>
+<p><strong>Issue:</strong> SSH connection refused
+- <strong>Solution:</strong> Verify VPS hostname/IP, check SSH credentials, ensure VPS is running (contact hosting provider)</p>
+<p><strong>Issue:</strong> Database query returns 0 rows (expected data)
+- <strong>Solution:</strong> Check date filter in WHERE clause, verify daily data refresh completed, review orchestrator logs</p>
+<p><strong>Issue:</strong> Service status shows "failed"
+- <strong>Solution:</strong> Check logs (<code>journalctl -u service-name -n 100</code>), look for errors, fix root cause, restart service</p>
+<p><strong>Issue:</strong> Email alerts not received
+- <strong>Solution:</strong> Check ALERT_EMAIL_ENABLED in .env.production, verify SendGrid quota, check spam folder</p>
+<hr />
+<h2 id="related-documents">Related Documents</h2>
+<p><strong>User Guides (Complete Walkthroughs):</strong>
+- GUIDE-001: Dashboard Navigation
+- GUIDE-002: Weekly Watchlist Management
+- GUIDE-003: Daily Signal Removal
+- GUIDE-004: Trade Journaling &amp; Post-Trade Analysis
+- GUIDE-005: Performance Metrics</p>
+<p><strong>SOPs (Operational Procedures):</strong>
+- SOP-001: VPS Service Management
+- SOP-002: Log Monitoring and Analysis
+- SOP-003: Database Access and Queries
+- SOP-004: Email Alert Response</p>
+<p><strong>Reference:</strong>
+- DOCUMENTATION_STYLE_GUIDE.md (Section 2.4: Training Materials)
+- DATABASE_SCHEMA.md (Complete schema reference)</p>
+<hr />
+<h2 id="next-steps-after-training">Next Steps After Training</h2>
+<p><strong>Week 1:</strong>
+- Shadow experienced operator during daily signal removal
+- Practice Apgar scoring on historical trades
+- Document 2-3 exits with charts and tactics</p>
+<p><strong>Week 2:</strong>
+- Operate independently with daily check-ins
+- Run first weekly scan solo
+- Respond to first INFO alert independently</p>
+<p><strong>Week 3:</strong>
+- Full independent operation
+- Handle first WARNING alert (if occurs)
+- Complete first post-trade review (60-day retrospective)</p>
+<p><strong>Month 2+:</strong>
+- Analyze your A-trade vs non-A-trade performance
+- Identify personal strengths/weaknesses in discretionary filtering
+- Optimize exit tactics based on journal data</p>
+<hr />
+<h2 id="change-log">Change Log</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Version</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-08</td>
+<td>1.0</td>
+<td>IB</td>
+<td>Initial creation - comprehensive new operator onboarding consolidating all guides and SOPs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Document Owner:</strong> Ian Butler
+<strong>Next Review:</strong> 2026-12-08
+<strong>Feedback:</strong> Open GitHub issue or contact via project channels</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ouegy/triple-screen-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

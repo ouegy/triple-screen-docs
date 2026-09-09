@@ -1,0 +1,2327 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete operational documentation for the Triple Screen quantitative trading system">
+      
+      
+        <meta name="author" content="Ian Butler">
+      
+      
+        <link rel="canonical" href="https://ouegy.github.io/triple-screen-docs/SOPs/SOP-004-email-alert-response/">
+      
+      
+        <link rel="prev" href="../SOP-003-database-access/">
+      
+      
+        <link rel="next" href="../../guides/GUIDE-001-dashboard-navigation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Email Alert Response - Triple Screen Trading System Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sop-004-email-alert-response" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Triple Screen Trading System Documentation" class="md-header__button md-logo" aria-label="Triple Screen Trading System Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Triple Screen Trading System Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Email Alert Response
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ouegy/triple-screen-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ouegy/triple-screen-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SOP-001-vps-service-management/" class="md-tabs__link">
+          
+  
+  
+  VPS Operations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/GUIDE-001-dashboard-navigation/" class="md-tabs__link">
+          
+  
+  
+  Dashboard Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/REF-001-vps-commands/" class="md-tabs__link">
+          
+  
+  
+  Quick Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../training/TRAIN-001-new-operator-onboarding/" class="md-tabs__link">
+          
+  
+  
+  Training
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Triple Screen Trading System Documentation" class="md-nav__button md-logo" aria-label="Triple Screen Trading System Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Triple Screen Trading System Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ouegy/triple-screen-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ouegy/triple-screen-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VPS Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOP-001-vps-service-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOP-002-log-monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOP-003-database-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Email Alert Response
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Email Alert Response
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-severity-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Severity Levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-alert-severity-from-email-subject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Identify Alert Severity from Email Subject
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-response-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Response Decision Tree
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alert Response Decision Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-2-critical-alert-response-nan-data-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: CRITICAL Alert Response - NaN Data Detected
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: CRITICAL Alert Response - NaN Data Detected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Actions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-warning-alert-response-data-validation-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: WARNING Alert Response - Data Validation Failures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: WARNING Alert Response - Data Validation Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-actions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Actions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-info-alert-verification-daily-ingestion-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: INFO Alert Verification - Daily Ingestion Complete
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: INFO Alert Verification - Daily Ingestion Complete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification Actions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-email-alert-decision-tree-visual-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Email Alert Decision Tree (Visual Reference)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboard Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-001-dashboard-navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-002-watchlist-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Watchlist Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-003-daily-signal-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Signal Removal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-004-trade-journaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trade Journaling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/GUIDE-005-performance-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/REF-001-vps-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/REF-002-database-queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Training
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/TRAIN-001-new-operator-onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New Operator Onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-severity-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Severity Levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-alert-severity-from-email-subject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Identify Alert Severity from Email Subject
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-response-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Response Decision Tree
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alert Response Decision Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-2-critical-alert-response-nan-data-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: CRITICAL Alert Response - NaN Data Detected
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: CRITICAL Alert Response - NaN Data Detected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Actions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-warning-alert-response-data-validation-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: WARNING Alert Response - Data Validation Failures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: WARNING Alert Response - Data Validation Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-actions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Actions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-info-alert-verification-daily-ingestion-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: INFO Alert Verification - Daily Ingestion Complete
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: INFO Alert Verification - Daily Ingestion Complete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification Actions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-email-alert-decision-tree-visual-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Email Alert Decision Tree (Visual Reference)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="sop-004-email-alert-response">SOP-004: Email Alert Response</h1>
+<p><strong>Version:</strong> 1.0 | <strong>Owner:</strong> System Operator | <strong>Review Date:</strong> 2026-12-08</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This SOP defines the systematic response procedure for email alerts sent by the Triple Screen trading system via SendGrid. Alerts are categorized by severity (CRITICAL, WARNING, INFO) and require different response times and actions. Following this procedure ensures data quality issues are detected and resolved before they impact trading decisions, prevents trading on corrupted data, and maintains system reliability.</p>
+<p>Expected outcomes:
+- Immediate detection and response to critical data quality issues
+- Systematic investigation and resolution of data validation failures
+- Verification of successful daily operations
+- Prevention of trading on invalid or incomplete data</p>
+<hr />
+<h2 id="scope">Scope</h2>
+<p><strong>When to use this SOP:</strong>
+- Received email alert from Triple Screen system (subject contains [CRITICAL], [WARNING], or [INFO])
+- Email monitoring during market data refresh windows (2:00-3:00 AM ET weekdays)
+- Daily verification of successful data ingestion
+- Investigating data quality issues affecting signal generation</p>
+<p><strong>When NOT to use:</strong>
+- Manual data quality checks (use SOP-003 instead)
+- Service health monitoring without alerts (use SOP-001)
+- Trading execution issues (separate escalation procedure)</p>
+<hr />
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting, ensure you have:
+-  Access to email account receiving alerts (configured as ALERT_EMAIL_TO)
+-  SSH access to VPS (for investigation steps)
+-  Database credentials (for verification queries)
+-  Understanding of alert severity levels and response times
+-  Ability to execute database queries from SOP-003</p>
+<hr />
+<h2 id="alert-severity-levels">Alert Severity Levels</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Response Time</th>
+<th>Impact</th>
+<th>Trading Allowed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CRITICAL</strong></td>
+<td>Immediate (within 15 minutes)</td>
+<td>System-wide data corruption, all signals invalid</td>
+<td>❌ HALT TRADING</td>
+</tr>
+<tr>
+<td><strong>WARNING</strong></td>
+<td>Within 2 hours</td>
+<td>Partial data failure, some symbols affected</td>
+<td>Continue (monitor)</td>
+</tr>
+<tr>
+<td><strong>INFO</strong></td>
+<td>Verify only (next business day)</td>
+<td>Normal operation confirmation</td>
+<td>Normal operations</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="procedure">Procedure</h2>
+<h3 id="step-1-identify-alert-severity-from-email-subject">Step 1: Identify Alert Severity from Email Subject</h3>
+<p>All Triple Screen alerts follow this format:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Subject: [SEVERITY] Triple Screen - [Alert Description]
+</code></pre></div></p>
+<h2 id="alert-response-decision-tree">Alert Response Decision Tree</h2>
+<p>The following flowchart shows response times and actions based on alert severity:</p>
+<pre class="mermaid"><code>%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#fff', 'secondaryTextColor':'#fff', 'tertiaryTextColor':'#fff'}}}%%
+graph TD
+    Start([Email Alert Received]) --&gt; CheckSeverity{Check Severity&lt;br/&gt;in Subject Line}
+
+    %% CRITICAL PATH
+    CheckSeverity --&gt;|CRITICAL| Critical[HALT TRADING&lt;br/&gt;Response: 15 min]
+    Critical --&gt; SSHVerify[SSH to VPS&lt;br/&gt;Verify NULL values]
+    SSHVerify --&gt; RunBackfill[Run backfill script&lt;br/&gt;Fix corrupted data]
+    RunBackfill --&gt; VerifyFix[Verify fix:&lt;br/&gt;Zero NULLs]
+    VerifyFix --&gt; Resume[Resume Trading&lt;br/&gt;Document incident]
+
+    %% WARNING PATH
+    CheckSeverity --&gt;|WARNING| Warning[Assess Scope&lt;br/&gt;Response: 2 hours]
+    Warning --&gt; CheckRate{Failure Rate?}
+    CheckRate --&gt;|&lt; 5%| LogMonitor[Log failed symbols&lt;br/&gt;Monitor trend]
+    CheckRate --&gt;|5-10%| Investigate[Investigate API issues&lt;br/&gt;Schedule retry]
+    CheckRate --&gt;|&gt; 10%| Escalate[Escalate to CRITICAL]
+    Investigate --&gt; LogMonitor
+    Escalate --&gt; Critical
+
+    %% INFO PATH
+    CheckSeverity --&gt;|INFO| Info[Verify Only&lt;br/&gt;Response: Next day]
+    Info --&gt; QuickCheck[Quick verification&lt;br/&gt;Success rate ≥95%]
+    QuickCheck --&gt; Done[Log success&lt;br/&gt;Archive email]
+
+    %% Class definitions with white text
+    classDef redNode fill:#ff6b6b,stroke:#000,stroke-width:2px,color:#fff;
+    classDef greenNode fill:#51cf66,stroke:#000,stroke-width:2px,color:#fff;
+    classDef orangeNode fill:#ffa94d,stroke:#000,stroke-width:2px,color:#fff;
+    classDef blueNode fill:#74c0fc,stroke:#000,stroke-width:2px,color:#fff;
+    classDef lightNode fill:#e1f5ff,color:#000;
+
+    %% Apply classes
+    class Critical,SSHVerify,RunBackfill,VerifyFix,Escalate redNode
+    class Resume,Done greenNode
+    class Warning,LogMonitor,Investigate,CheckRate orangeNode
+    class Info,QuickCheck blueNode
+    class Start,CheckSeverity lightNode</code></pre>
+<p><strong>Decision tree summary:</strong>
+- <strong>CRITICAL</strong> (Red): 15-minute response → Halt trading → SSH verification → Run backfill → Resume after fix
+- <strong>WARNING</strong> (Orange): 2-hour response → Assess failure rate → Retry or monitor → Escalate if &gt;10% failure
+- <strong>INFO</strong> (Blue): Next-day verification → Quick metrics review → Log success</p>
+<p><strong>Success criteria:</strong> Correctly identified severity level and corresponding response procedure</p>
+<hr />
+<h3 id="step-2-critical-alert-response-nan-data-detected">Step 2: CRITICAL Alert Response - NaN Data Detected</h3>
+<p><strong>CRITICAL</strong>: DO NOT TRADE until this is resolved. All Force Index calculations will be INVALID.</p>
+<h4 id="alert-example">Alert Example:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Subject: [CRITICAL] Triple Screen - NaN Data Detected - 235/507 symbols (46.4%)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Date: 2026-09-08
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Severity: CRITICAL
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Component: Daily Data Ingestion
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Issue:
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>- 235/507 symbols (46.4%) have NaN values
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>- Affected date: 2026-09-08
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>- Force Index and other indicator calculations will be INVALID
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>- DO NOT TRADE until data is fixed
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Affected Symbols (first 20):
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>AAPL, MSFT, ABBV, ACN, ADBE, AIG, ALL, AMZN, ANTM, AXP, BA, BAC, BK, BMY, C, CAT, CHTR, CL, CMCSA, COP
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>...
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>Action Required:
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>1. DO NOT TRADE new signals until data fixed
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2. Run backfill script:
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>   poetry run python -m src.scripts.backfill_corrupted_data --date 2026-09-08
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>3. Verify fix with:
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>   SELECT symbol, close FROM daily_prices
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>   WHERE date = '2026-09-08' AND close IS NULL
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>   LIMIT 10;
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>4. Re-run signal scan after data fixed
+</code></pre></div>
+<h4 id="response-actions">Response Actions:</h4>
+<ol>
+<li>
+<p><strong>Immediately halt trading (if automated system has "trade execution enabled" flag):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># NOTE: Placeholder for future automation control</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># For now, DO NOT manually execute any pending signals</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>SSH to VPS and verify issue:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ssh<span class="w"> </span>triple-screen@your-vps-hostname.com
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PGPASSWORD</span><span class="o">=</span><span class="s1">'your_database_password'</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s2">  SELECT symbol, close FROM daily_prices</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s2">  WHERE date = CURRENT_DATE AND close IS NULL</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s2">  LIMIT 10;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s2">"</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p><strong>Expected output (confirms issue):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> symbol | close
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>--------+-------
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a> AAPL   |
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a> MSFT   |
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a> ABBV   |
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>(10 rows showing NULL closes)
+</code></pre></div></p>
+<ol>
+<li><strong>Check orchestrator logs for root cause:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>triple-screen-orchestrator<span class="w"> </span>--since<span class="w"> </span><span class="s2">"today 02:00"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ERROR<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-50
+</code></pre></div></li>
+</ol>
+<p>Common causes:
+   - Yahoo Finance API rate limiting or downtime
+   - Network connectivity issues during data refresh
+   - Database write failures</p>
+<ol>
+<li><strong>Run backfill script (if implemented):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/triple-screen/backend
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">source</span><span class="w"> </span>/opt/triple-screen/.venv/bin/activate
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>src.scripts.backfill_corrupted_data<span class="w"> </span>--date<span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>
+</code></pre></div></li>
+</ol>
+<p><strong>Expected output:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>INFO: Fetching data for 235 corrupted symbols
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>INFO: Successfully backfilled 230/235 symbols
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>WARNING: 5 symbols still have no data (delisted or API unavailable)
+</code></pre></div></p>
+<ol>
+<li><strong>Verify fix with NULL count query:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="s2">  SELECT COUNT(*) as null_count</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="s2">  FROM daily_prices</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="s2">  WHERE date = CURRENT_DATE AND close IS NULL;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="s2">"</span>
+</code></pre></div></li>
+</ol>
+<p><strong>Expected output after fix:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a> null_count
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>------------
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>          0
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>(1 row)
+</code></pre></div></p>
+<ol>
+<li>
+<p><strong>Re-run signal scan:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Note: Backfill script already recalculates indicators automatically</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1"># Only need to trigger signal scan for new opportunities</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nb">cd</span><span class="w"> </span>/opt/triple-screen/backend
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>scripts/run_signal_scan.py
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Verify trading can resume:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="s2">  SELECT</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="s2">    COUNT(DISTINCT dp.symbol_id) as symbols_with_prices,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="s2">    COUNT(DISTINCT i_fi.symbol_id) as symbols_with_force_index</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s2">  FROM daily_prices dp</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="s2">  LEFT JOIN indicators i_fi ON i_fi.symbol_id = dp.symbol_id</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="s2">    AND i_fi.date = dp.date</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="s2">    AND i_fi.indicator_name = 'force_index_13_daily'</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="s2">  WHERE dp.date = CURRENT_DATE;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="s2">"</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p><strong>Expected output (trading safe):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a> symbols_with_prices | symbols_with_force_index
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>---------------------+--------------------------
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>                 507 |                      507
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>(1 row)
+</code></pre></div></p>
+<ol>
+<li><strong>Document incident and resume trading:</strong></li>
+<li>Log issue in trading journal with root cause</li>
+<li>Note time trading was halted and resumed</li>
+<li>Monitor next 2 hours for recurring issues</li>
+</ol>
+<p>⏱️ <strong>Response Time Requirement:</strong> Complete within 15 minutes of receiving alert</p>
+<p><strong>Success criteria:</strong>
+- Zero NULL values in daily_prices for current date
+- All indicators calculated successfully
+- Signal scan runs without errors
+- Incident documented in trading journal</p>
+<hr />
+<h3 id="step-3-warning-alert-response-data-validation-failures">Step 3: WARNING Alert Response - Data Validation Failures</h3>
+<p><strong>WARNING</strong>: Partial data failure. Trading can continue for unaffected symbols, but monitor closely.</p>
+<h4 id="alert-example_1">Alert Example:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Subject: [WARNING] Triple Screen - Data Validation Failures - 12/507 (2.4%)
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Date: 2026-09-08
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Severity: WARNING
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Component: Daily Data Ingestion
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>Issue:
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>- 12/507 symbols (2.4%) failed validation
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>- Common issues: NaN values, high &lt; low, negative prices
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>- Successfully ingested: 495 symbols
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>Failed Symbols:
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>- ABBV: high (145.23) must be &gt;= low (148.50)
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>- ACN: close price is NaN
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>- ADBE: negative volume (-1000)
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>... and 9 more
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>Impact:
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>- Partial data ingestion (trading can continue for valid symbols)
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>- Missing data may affect signal generation for failed symbols
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>Action:
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>- Review yahoo_daily_update.py logs for details
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>- Re-run ingestion after market close if Yahoo API was unstable
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>- Consider using retry logic (MON-003) if not already enabled
+</code></pre></div>
+<h4 id="response-actions_1">Response Actions:</h4>
+<ol>
+<li><strong>Assess scope of failure (within 30 minutes):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ssh<span class="w"> </span>triple-screen@your-vps-hostname.com
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PGPASSWORD</span><span class="o">=</span><span class="s1">'your_database_password'</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="s2">  SELECT COUNT(*) as successful_symbols</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="s2">  FROM daily_prices</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="s2">  WHERE date = CURRENT_DATE;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="s2">"</span>
+</code></pre></div></li>
+</ol>
+<p><strong>Decision tree for severity:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Failed symbol percentage
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  ├─ &lt;5%   → Log and monitor (acceptable)
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  ├─ 5-10% → Investigate within 2 hours
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  └─ &gt;10%  → Escalate to CRITICAL response (Step 2)
+</code></pre></div></p>
+<ol>
+<li>
+<p><strong>Check orchestrator logs for validation error details:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>triple-screen-orchestrator<span class="w"> </span>--since<span class="w"> </span><span class="s2">"today 02:00"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"validation failed"</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Identify common error patterns:</strong></p>
+</li>
+<li><strong>NaN values</strong>: Yahoo Finance API returned incomplete data</li>
+<li><strong>High &lt; Low violations</strong>: Data integrity issue or API bug</li>
+<li>
+<p><strong>Negative prices/volume</strong>: Data corruption or parsing error</p>
+</li>
+<li>
+<p><strong>For &lt;5% failure rate (acceptable):</strong></p>
+</li>
+<li>Note failed symbols in monitoring log</li>
+<li>Verify these symbols don't have pending signals:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_portfolio<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="s2">  SELECT symbol, signal_date, status</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="s2">  FROM live_signals</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="s2">  WHERE symbol IN ('ABBV', 'ACN', 'ADBE')</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="s2">    AND status = 'pending';</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="s2">"</span>
+</code></pre></div></li>
+<li>
+<p>If pending signals exist for failed symbols → Mark as "data unavailable" (manual review required)</p>
+</li>
+<li>
+<p><strong>For 5-10% failure rate (needs investigation):</strong></p>
+</li>
+<li>Check Yahoo Finance status: <code>curl -I https://finance.yahoo.com/</code></li>
+<li>Review API rate limiting:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>triple-screen-orchestrator<span class="w"> </span>--since<span class="w"> </span><span class="s2">"today 02:00"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"rate limit"</span>
+</code></pre></div></li>
+<li>
+<p>Consider re-running ingestion after 1 hour (API may recover)</p>
+</li>
+<li>
+<p><strong>Schedule retry if Yahoo API was unstable:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Manual retry for specific symbols</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">cd</span><span class="w"> </span>/opt/triple-screen/backend
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>src.scripts.yahoo_daily_update<span class="w"> </span>--symbols<span class="w"> </span>ABBV,ACN,ADBE<span class="w"> </span>--date<span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Document failures:</strong></p>
+</li>
+<li>Add entry to trading journal: "WARNING: 12 symbols failed validation on 2026-09-08 - Yahoo API instability"</li>
+<li>Monitor trend: If &gt;3 WARNING alerts in one week → Escalate to developer</li>
+</ol>
+<p>⏱️ <strong>Response Time Requirement:</strong> Assess within 30 minutes, resolve within 2 hours</p>
+<p><strong>Success criteria:</strong>
+- Failure rate assessed and documented
+- No pending signals on failed symbols (or marked for manual review)
+- Retry scheduled if API issue (and retry succeeds)
+- Acceptable to proceed with 400+ symbols successfully loaded</p>
+<hr />
+<h3 id="step-4-info-alert-verification-daily-ingestion-complete">Step 4: INFO Alert Verification - Daily Ingestion Complete</h3>
+<p><strong>INFO</strong>: Normal operations. Verify expected outcomes and log success.</p>
+<h4 id="alert-example_2">Alert Example:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Subject: [INFO] Triple Screen - Daily Ingestion Complete - 507/507 (100.0%)
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>Date: 2026-09-08
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>Severity: INFO
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Component: Daily Data Ingestion
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>Results:
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>- Successful: 507/507 symbols (100.0%)
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>- Failed: 0 symbols
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>- Daily rows inserted: 507
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>- Weekly rows inserted: 0
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>- Execution time: 45.3s
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>Next Steps:
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>- Signal scan will run at 3:00 AM ET (after indicator calculation)
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>- Check orchestrator logs for signal generation results
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>Status:  All systems normal
+</code></pre></div>
+<h4 id="verification-actions">Verification Actions:</h4>
+<ol>
+<li><strong>Quick verification (next business day, within 1 hour of market open):</strong></li>
+<li>Confirm success rate: 100% or &gt;95% acceptable</li>
+<li>Note execution time (baseline: 30-60 seconds for 507 symbols)</li>
+<li>
+<p>Verify row counts match expected universe size</p>
+</li>
+<li>
+<p><strong>Optional deep verification (if you want extra confidence):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>ssh<span class="w"> </span>triple-screen@your-vps-hostname.com
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PGPASSWORD</span><span class="o">=</span><span class="s1">'your_database_password'</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="s2">  SELECT COUNT(*) as record_count</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="s2">  FROM daily_prices</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="s2">  WHERE date = CURRENT_DATE;</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="s2">"</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p><strong>Expected output:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a> record_count
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>--------------
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>          507
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>(1 row)
+</code></pre></div></p>
+<ol>
+<li><strong>Check for pending signals (trading opportunities):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_portfolio<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="s2">  SELECT id, symbol, signal_date, status, expires_at</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="s2">  FROM live_signals</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="s2">  WHERE status = 'pending'</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="s2">  ORDER BY signal_date DESC;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="s2">"</span>
+</code></pre></div></li>
+</ol>
+<p><strong>Expected output (example):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a> id | symbol | signal_date         | status  | expires_at
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>----+--------+---------------------+---------+---------------------
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>  5 | AAPL   | 2026-09-08 09:30:00 | pending | 2026-09-09 09:30:00
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>  6 | MSFT   | 2026-09-08 09:30:00 | pending | 2026-09-09 09:30:00
+</code></pre></div></p>
+<ol>
+<li><strong>No action required beyond logging:</strong></li>
+<li>Note successful ingestion in trading journal (optional)</li>
+<li>Review pending signals for trading opportunities</li>
+<li>Delete email (or archive for audit trail)</li>
+</ol>
+<p>⏱️ <strong>Response Time Requirement:</strong> Verify next business day (no urgency)</p>
+<p><strong>Success criteria:</strong>
+- Success rate ≥95%
+- Execution time &lt;90 seconds
+- Row count matches expected symbol universe
+- Pending signals reviewed (if any)</p>
+<hr />
+<h2 id="verification">Verification</h2>
+<p>After completing alert response (CRITICAL or WARNING), verify system health:</p>
+<ol>
+<li><strong>Data completeness check:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="s2">  SELECT</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="s2">    COUNT(*) as total_rows,</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="s2">    COUNT(CASE WHEN close IS NULL THEN 1 END) as null_closes,</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="s2">    COUNT(CASE WHEN volume IS NULL THEN 1 END) as null_volumes</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="s2">  FROM daily_prices</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="s2">  WHERE date = CURRENT_DATE;</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="s2">"</span>
+</code></pre></div></li>
+</ol>
+<p><strong>Expected results:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a> total_rows | null_closes | null_volumes
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>------------+-------------+--------------
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>        507 |           0 |            0
+</code></pre></div></p>
+<ol>
+<li><strong>Indicator calculation check:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>triple_screen<span class="w"> </span>-d<span class="w"> </span>supertrader_market<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="s2">  SELECT</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="s2">    COUNT(DISTINCT symbol_id) as symbols_with_indicators</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="s2">  FROM indicators</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="s2">  WHERE date = CURRENT_DATE</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="s2">    AND indicator_name = 'force_index_13_daily';</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="s2">"</span>
+</code></pre></div></li>
+</ol>
+<p><strong>Expected results:</strong> Count matches total symbols (507)</p>
+<ol>
+<li><strong>Signal scan completion check:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>triple-screen-orchestrator<span class="w"> </span>--since<span class="w"> </span><span class="s2">"today 03:00"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"Signal scan complete"</span>
+</code></pre></div></li>
+</ol>
+<p><strong>Expected output:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Sep 08 03:15:23 INFO: Signal scan complete - 2 new signals, 5 pending
+</code></pre></div></p>
+<p><strong>Expected results:</strong>
+-  Zero NULL values in daily_prices
+-  All symbols have Force Index calculated
+-  Signal scan completed successfully (or scheduled to run)
+-  No ERROR messages in orchestrator logs since fix</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Possible Cause</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CRITICAL alert but no NULL values found in database</td>
+<td>Alert triggered incorrectly OR data already fixed by auto-retry</td>
+<td>Verify indicator count matches price count <br> Check orchestrator logs for auto-recovery messages <br> If counts match, consider alert a false positive (monitor next day)</td>
+</tr>
+<tr>
+<td>Backfill script fails with "symbol not found"</td>
+<td>Yahoo Finance delisted symbol or ticker changed</td>
+<td>Acceptable - log as "permanently unavailable" <br> Remove from active symbol universe (update watchlist) <br> If &gt;5% of symbols delisted in one month → Review universe composition</td>
+</tr>
+<tr>
+<td>WARNING alert every day for same symbols</td>
+<td>Persistent Yahoo API issue OR symbol delisted</td>
+<td>Check Yahoo Finance manually for those symbols <br> If 404/delisted → Remove from universe <br> If intermittent → Add retry logic or switch to backup data source</td>
+</tr>
+<tr>
+<td>INFO alert shows 0% success rate</td>
+<td>Complete system failure (orchestrator didn't run)</td>
+<td>Check service status: <code>sudo systemctl status triple-screen-orchestrator</code> <br> Review logs: <code>sudo journalctl -u triple-screen-orchestrator --since "today 02:00"</code> <br> Restart service if needed (SOP-001) <br> Escalate to developer if cron job failed</td>
+</tr>
+<tr>
+<td>No email received by 3:30 AM ET on trading day</td>
+<td>Email alerts disabled OR SendGrid quota exceeded OR orchestrator crashed before sending</td>
+<td>Check ALERT_EMAIL_ENABLED in .env.production <br> Verify SendGrid API quota: login to SendGrid dashboard <br> Check orchestrator status: <code>sudo systemctl status triple-screen-orchestrator</code> <br> If crashed, investigate crash logs (SOP-001)</td>
+</tr>
+<tr>
+<td>Backfill succeeds but indicators still show NULL</td>
+<td>Indicator calculation didn't run after backfill</td>
+<td>Manually trigger indicator calculation: <br> <code>poetry run python -m src.scripts.calculate_daily_indicators --date $(date +%Y-%m-%d)</code> <br> Verify success with indicator count query (Step 7 of CRITICAL response)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Escalation:</strong>
+- CRITICAL alerts unresolved after 30 minutes → Contact development team with full logs and error messages
+- WARNING alerts recurring daily for &gt;3 days → Request data source review or backup API integration
+- INFO alerts showing declining success rates (95% → 90% → 85%) over 1 week → Proactive escalation before CRITICAL failure
+- No email received for 2+ consecutive trading days → Investigate email configuration and orchestrator health immediately</p>
+<hr />
+<h2 id="rollback">Rollback</h2>
+<p>Email alerts are informational only - no rollback procedure required.</p>
+<p><strong>If alert system is malfunctioning (sending false positives):</strong>
+1. Disable alerts temporarily:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>ssh<span class="w"> </span>triple-screen@your-vps-hostname.com
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/opt/triple-screen/.env.production
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="c1"># Set: ALERT_EMAIL_ENABLED=false</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>triple-screen-orchestrator
+</code></pre></div></p>
+<ol>
+<li>
+<p>Investigate root cause (check alert logic in backend/src/monitoring/alerts.py)</p>
+</li>
+<li>
+<p>Re-enable after fix verified:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># Set: ALERT_EMAIL_ENABLED=true</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>triple-screen-orchestrator
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="related-documents">Related Documents</h2>
+<ul>
+<li><strong>SOP-001: VPS Service Management</strong> - Log review and service restart procedures</li>
+<li><strong>SOP-003: Database Access and Queries</strong> - All database verification queries</li>
+<li><strong>DATABASE_SCHEMA.md</strong> - Schema reference for daily_prices and indicators tables</li>
+<li><strong>backend/src/monitoring/alerts.py</strong> - Alert implementation and email templates</li>
+<li><strong>Quick Reference: Email Alert Decision Tree</strong> (one-page flowchart - to be created)</li>
+</ul>
+<hr />
+<h2 id="appendix-email-alert-decision-tree-visual-reference">Appendix: Email Alert Decision Tree (Visual Reference)</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>┌─────────────────────────────────────────────────────────┐
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>│         Receive Triple Screen Email Alert               │
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>└───────────────────┬─────────────────────────────────────┘
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>                    │
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>                    ▼
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>            ┌───────────────┐
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>            │ Read Subject  │
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>            │   Line        │
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>            └───────┬───────┘
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>                    │
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>        ┌───────────┼───────────┐
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>        │           │           │
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>        ▼           ▼           ▼
+<a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>  [CRITICAL]    [WARNING]    [INFO]
+<a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a>        │           │           │
+<a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>        │           │           │
+<a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a>   ┌────▼────┐ ┌───▼────┐ ┌───▼────┐
+<a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a>   │ STOP    │ │ Assess │ │ Verify │
+<a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a>   │ TRADING │ │ Scope  │ │ Only   │
+<a id="__codelineno-32-20" name="__codelineno-32-20" href="#__codelineno-32-20"></a>   └────┬────┘ └───┬────┘ └───┬────┘
+<a id="__codelineno-32-21" name="__codelineno-32-21" href="#__codelineno-32-21"></a>        │           │           │
+<a id="__codelineno-32-22" name="__codelineno-32-22" href="#__codelineno-32-22"></a>        ▼           ▼           ▼
+<a id="__codelineno-32-23" name="__codelineno-32-23" href="#__codelineno-32-23"></a>   15 min      2 hours    Next day
+<a id="__codelineno-32-24" name="__codelineno-32-24" href="#__codelineno-32-24"></a>   response    response   (optional)
+<a id="__codelineno-32-25" name="__codelineno-32-25" href="#__codelineno-32-25"></a>        │           │           │
+<a id="__codelineno-32-26" name="__codelineno-32-26" href="#__codelineno-32-26"></a>        ▼           ▼           ▼
+<a id="__codelineno-32-27" name="__codelineno-32-27" href="#__codelineno-32-27"></a>   ┌────────┐ ┌────────┐ ┌────────┐
+<a id="__codelineno-32-28" name="__codelineno-32-28" href="#__codelineno-32-28"></a>   │ SSH +  │ │ Check  │ │ Review │
+<a id="__codelineno-32-29" name="__codelineno-32-29" href="#__codelineno-32-29"></a>   │ Verify │ │ Logs   │ │ Counts │
+<a id="__codelineno-32-30" name="__codelineno-32-30" href="#__codelineno-32-30"></a>   │ NULLs  │ │        │ │        │
+<a id="__codelineno-32-31" name="__codelineno-32-31" href="#__codelineno-32-31"></a>   └────┬───┘ └───┬────┘ └───┬────┘
+<a id="__codelineno-32-32" name="__codelineno-32-32" href="#__codelineno-32-32"></a>        │          │           │
+<a id="__codelineno-32-33" name="__codelineno-32-33" href="#__codelineno-32-33"></a>        ▼          ▼           ▼
+<a id="__codelineno-32-34" name="__codelineno-32-34" href="#__codelineno-32-34"></a>   ┌────────┐ ┌────────┐ ┌────────┐
+<a id="__codelineno-32-35" name="__codelineno-32-35" href="#__codelineno-32-35"></a>   │ Run    │ │ Retry  │ │ Log &amp;  │
+<a id="__codelineno-32-36" name="__codelineno-32-36" href="#__codelineno-32-36"></a>   │ Backfill│ │ Failed │ │ Delete │
+<a id="__codelineno-32-37" name="__codelineno-32-37" href="#__codelineno-32-37"></a>   │        │ │ Symbols│ │        │
+<a id="__codelineno-32-38" name="__codelineno-32-38" href="#__codelineno-32-38"></a>   └────┬───┘ └───┬────┘ └────────┘
+<a id="__codelineno-32-39" name="__codelineno-32-39" href="#__codelineno-32-39"></a>        │          │
+<a id="__codelineno-32-40" name="__codelineno-32-40" href="#__codelineno-32-40"></a>        ▼          ▼
+<a id="__codelineno-32-41" name="__codelineno-32-41" href="#__codelineno-32-41"></a>   ┌────────┐ ┌────────┐
+<a id="__codelineno-32-42" name="__codelineno-32-42" href="#__codelineno-32-42"></a>   │ Verify │ │ Monitor│
+<a id="__codelineno-32-43" name="__codelineno-32-43" href="#__codelineno-32-43"></a>   │ Fix    │ │ Trend  │
+<a id="__codelineno-32-44" name="__codelineno-32-44" href="#__codelineno-32-44"></a>   └────┬───┘ └────────┘
+<a id="__codelineno-32-45" name="__codelineno-32-45" href="#__codelineno-32-45"></a>        │
+<a id="__codelineno-32-46" name="__codelineno-32-46" href="#__codelineno-32-46"></a>        ▼
+<a id="__codelineno-32-47" name="__codelineno-32-47" href="#__codelineno-32-47"></a>   ┌────────┐
+<a id="__codelineno-32-48" name="__codelineno-32-48" href="#__codelineno-32-48"></a>   │ Resume │
+<a id="__codelineno-32-49" name="__codelineno-32-49" href="#__codelineno-32-49"></a>   │ Trading│
+<a id="__codelineno-32-50" name="__codelineno-32-50" href="#__codelineno-32-50"></a>   └────────┘
+</code></pre></div>
+<hr />
+<h2 id="change-log">Change Log</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Version</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-08</td>
+<td>1.0</td>
+<td>IB</td>
+<td>Initial creation - decision tree approach for 3 alert types</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ouegy/triple-screen-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
