@@ -9,6 +9,9 @@ repo_url: https://github.com/ouegy/triple-screen-docs
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/fix-mermaid-text.js
+
 theme:
   name: material
   palette:
