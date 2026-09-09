@@ -1,0 +1,82 @@
+site_name: Triple Screen Trading System Documentation
+site_description: Complete operational documentation for the Triple Screen quantitative trading system
+site_author: Ian Butler
+site_url: https://ouegy.github.io/triple-screen-docs
+
+repo_name: ouegy/triple-screen-docs
+repo_url: https://github.com/ouegy/triple-screen-docs
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+    - content.code.annotate
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - VPS Operations:
+      - Service Management: SOPs/SOP-001-vps-service-management.md
+      - Log Monitoring: SOPs/SOP-002-log-monitoring.md
+      - Database Access: SOPs/SOP-003-database-access.md
+      - Email Alert Response: SOPs/SOP-004-email-alert-response.md
+  - Dashboard Guides:
+      - Navigation: guides/GUIDE-001-dashboard-navigation.md
+      - Watchlist Management: guides/GUIDE-002-watchlist-management.md
+      - Daily Signal Removal: guides/GUIDE-003-daily-signal-removal.md
+      - Trade Journaling: guides/GUIDE-004-trade-journaling.md
+      - Performance Metrics: guides/GUIDE-005-performance-metrics.md
+  - Quick Reference:
+      - VPS Commands: reference/REF-001-vps-commands.md
+      - Database Queries: reference/REF-002-database-queries.md
+  - Training:
+      - New Operator Onboarding: training/TRAIN-001-new-operator-onboarding.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ouegy/triple-screen-docs
