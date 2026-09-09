@@ -66,6 +66,7 @@ Subject: [SEVERITY] Triple Screen - [Alert Description]
 The following flowchart shows response times and actions based on alert severity:
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#fff', 'secondaryTextColor':'#fff', 'tertiaryTextColor':'#fff'}}}%%
 graph TD
     Start([Email Alert Received]) --> CheckSeverity{Check Severity<br/>in Subject Line}
 
@@ -90,22 +91,19 @@ graph TD
     Info --> QuickCheck[Quick verification<br/>Success rate ≥95%]
     QuickCheck --> Done[Log success<br/>Archive email]
 
-    %% Styling
-    style Start fill:#e1f5ff,color:#000
-    style Critical fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style SSHVerify fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style RunBackfill fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style VerifyFix fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style Resume fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
-    style Warning fill:#d97706,color:#fff !important,stroke:#000,stroke-width:2px
-    style LogMonitor fill:#d97706,color:#fff !important,stroke:#000,stroke-width:2px
-    style Investigate fill:#d97706,color:#fff !important,stroke:#000,stroke-width:2px
-    style Escalate fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
-    style Info fill:#2563eb,color:#fff !important,stroke:#000,stroke-width:2px
-    style QuickCheck fill:#2563eb,color:#fff !important,stroke:#000,stroke-width:2px
-    style Done fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
-    style CheckSeverity fill:#e1f5ff,color:#000
-    style CheckRate fill:#d97706,color:#fff
+    %% Class definitions with white text
+    classDef redNode fill:#c41e3a,stroke:#000,stroke-width:2px,color:#fff
+    classDef greenNode fill:#2d6a2d,stroke:#000,stroke-width:2px,color:#fff
+    classDef orangeNode fill:#d97706,stroke:#000,stroke-width:2px,color:#fff
+    classDef blueNode fill:#2563eb,stroke:#000,stroke-width:2px,color:#fff
+    classDef lightNode fill:#e1f5ff,color:#000
+
+    %% Apply classes
+    class Critical,SSHVerify,RunBackfill,VerifyFix,Escalate redNode
+    class Resume,Done greenNode
+    class Warning,LogMonitor,Investigate,CheckRate orangeNode
+    class Info,QuickCheck blueNode
+    class Start,CheckSeverity lightNode
 ```
 
 **Decision tree summary:**
