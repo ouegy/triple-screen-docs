@@ -6,9 +6,6 @@ site_url: https://ouegy.github.io/triple-screen-docs
 repo_name: ouegy/triple-screen-docs
 repo_url: https://github.com/ouegy/triple-screen-docs
 
-extra_css:
-  - stylesheets/mermaid.css
-
 theme:
   name: material
   palette:
