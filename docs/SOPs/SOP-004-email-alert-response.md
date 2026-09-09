@@ -92,18 +92,18 @@ graph TD
 
     %% Styling
     style Start fill:#e1f5ff,color:#000
-    style Critical fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style SSHVerify fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style RunBackfill fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style VerifyFix fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style Resume fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
-    style Warning fill:#d97706,color:#fff,stroke:#000,stroke-width:2px
-    style LogMonitor fill:#d97706,color:#fff,stroke:#000,stroke-width:2px
-    style Investigate fill:#d97706,color:#fff,stroke:#000,stroke-width:2px
-    style Escalate fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style Info fill:#2563eb,color:#fff,stroke:#000,stroke-width:2px
-    style QuickCheck fill:#2563eb,color:#fff,stroke:#000,stroke-width:2px
-    style Done fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
+    style Critical fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style SSHVerify fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style RunBackfill fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style VerifyFix fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style Resume fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
+    style Warning fill:#d97706,color:#fff !important,stroke:#000,stroke-width:2px
+    style LogMonitor fill:#d97706,color:#fff !important,stroke:#000,stroke-width:2px
+    style Investigate fill:#d97706,color:#fff !important,stroke:#000,stroke-width:2px
+    style Escalate fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style Info fill:#2563eb,color:#fff !important,stroke:#000,stroke-width:2px
+    style QuickCheck fill:#2563eb,color:#fff !important,stroke:#000,stroke-width:2px
+    style Done fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
     style CheckSeverity fill:#e1f5ff,color:#000
     style CheckRate fill:#d97706,color:#fff
 ```

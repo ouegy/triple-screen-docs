@@ -63,7 +63,7 @@ graph TD
     Found([Found the issue?])
 
     style Start fill:#e1f5ff,color:#000
-    style Found fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
+    style Found fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
     style RealTime fill:#2d6a2d,color:#fff
     style Historical fill:#2d6a2d,color:#fff
     style Errors fill:#c41e3a,color:#fff

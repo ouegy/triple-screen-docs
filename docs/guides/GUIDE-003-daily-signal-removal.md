@@ -292,13 +292,13 @@ graph TD
     FinalKeep --> Monitor([Monitor for<br/>Screen 3 Breakout])
 
     style Start fill:#e1f5ff,color:#000
-    style FinalKeep fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
-    style Monitor fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
-    style Remove1 fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style Remove2 fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style Remove3 fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style Remove4 fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
-    style End fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
+    style FinalKeep fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
+    style Monitor fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
+    style Remove1 fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style Remove2 fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style Remove3 fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style Remove4 fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
+    style End fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
     style MarketRegime fill:#e1f5ff,color:#000
     style BullKeep fill:#2d6a2d,color:#fff
     style ChoppyKeep fill:#d97706,color:#fff

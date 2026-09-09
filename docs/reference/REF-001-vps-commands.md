@@ -173,8 +173,8 @@ graph TD
     Verify -->|No| Escalate[Escalate to Dev]
 
     style Start fill:#e1f5ff,color:#000
-    style Resolved fill:#2d6a2d,color:#fff,stroke:#000,stroke-width:2px
-    style Escalate fill:#c41e3a,color:#fff,stroke:#000,stroke-width:2px
+    style Resolved fill:#2d6a2d,color:#fff !important,stroke:#000,stroke-width:2px
+    style Escalate fill:#c41e3a,color:#fff !important,stroke:#000,stroke-width:2px
     style CheckStatus fill:#e1f5ff,color:#000
     style Restart fill:#c41e3a,color:#fff
     style StartSvc fill:#c41e3a,color:#fff
